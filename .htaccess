@@ -1,0 +1,13 @@
+ErrorDocument 400 /index.php?error=400
+ErrorDocument 401 /index.php?error=401
+ErrorDocument 403 /index.php?error=403
+ErrorDocument 404 /index.php?error=404
+ErrorDocument 500 /index.php?error=500
+
+RewriteEngine on
+
+RewriteRule ^edit$ /edit.php
+RewriteRule ^([0-9a-zA-Z_/]+)/#([0-9a-zA-Z_/]+)$ /$2 [R]
+RewriteRule ^([0-9a-zA-Z_/]+)([#])([0-9a-zA-Z_/]+)$ /$3 [R]
+RewriteRule ^([0-9a-zA-Z_/]+)/$ /$1 [R]
+RewriteRule ^([0-9a-zA-Z_/]+)$ /index.php?requestedPage=$1

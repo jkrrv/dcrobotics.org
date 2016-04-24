@@ -1,0 +1,63 @@
+<h1>About The Program</h1>
+
+<p>The DC Robotics program is amazingly different from most school programs in two main ways:  first, students don't have regularly-scheduled class time to work on and perfect their creations; and second, instead of a regimented curriculum commanding what to do, students are given a set of parts and encouragement.  This way, students come up with their own ideas, try them out, and succeed or fail&mdash;just like the real world.  Either way, students learn both how to build and problem-solve by doing.  If you're wondering how this could possibly lead to positive results, the DC teams consistently perform well, often winning tournaments and constantly hanging high in the rankings.</p>
+
+<div class="rightBox" style="float:right;" id="vidBox">
+	<object type="application/x-shockwave-flash" id="ytplayer" style="height:200px; width:300px;" data="http://www.youtube.com/v/AMWHLiCBHno?video_id=AMWHLiCBHno&amp;version=3&amp;enablejsapi=1&amp;playerapiid=ytplayer&amp;hd=1">
+	<param name="allowScriptAccess" value="always" />
+	<param name="bgcolor" value="#000000" />
+	<span style="color:#f00;">We don't really like Flash Player either, <br />but you need it to see YouTube videos.</span>
+	</object>
+
+	<p class="caption">The Official <b>Game Animation</b> which explains how a match works. <i class="photoCredit">Video: VEX Robotics</i></p>
+
+	<script type="text/javascript">
+		function onYouTubePlayerReady(playerId) {
+			ytplayer = document.getElementById("ytplayer");
+			ytplayer.setPlaybackQuality('large');
+			ytplayer.addEventListener("onStateChange", "ytplayerStateChange");
+			altytplayer = document.getElementById("altytplayer");
+			altytplayer.setPlaybackQuality('large');
+			altytplayer.addEventListener("onStateChange", "ytplayerStateChange");
+		}
+
+		function ytplayerStateChange(newState) {
+			ytplayer = document.getElementById("ytplayer");
+			altytplayer = document.getElementById("altytplayer");
+			switch(newState) {
+			  case 1:
+				ytplayer.style.width="940px";
+				ytplayer.style.height="735px";
+				altytplayer.style.width="940px";
+				altytplayer.style.height="735px";
+				break;
+			  case 2:
+				ytplayer.style.width="300px";
+				ytplayer.style.height="200px";
+				altytplayer.style.width="300px";
+				altytplayer.style.height="200px";
+				break;
+			  case 3:
+				ytplayer.setPlaybackQuality('large');
+				altytplayer.setPlaybackQuality('large');
+			}
+		}
+	</script>
+</div>
+
+<h2>Competition</h2>
+<p>DC Robotics completely uses the <a href="http://vexrobotics.com" class="_confirm _blank">VEX Robotics</a> Platform.  This system provides a line of parts that somewhat resemble the pieces of an Erector Set, a challenging game to try to win, and competition to rival.  Teams from schools and neighborhood groups around the world meet at dozens of tournaments to find stellar robots and their budding engineers.  The game teams play changes every school-year to keep ingenuity fresh and give new teams a chance.  This year, the game is VEX Round-Up.  On the right, you can watch the video VEX provides to explain the basics.  To put it simply, there are four teams competing at a time, two teams per alliance.  Alliances work together to score plastic tubes (affectionately called 'donuts') on foot-high pillars.  After the match, the scores are calculated and teams are ranked for an elimination-style tournament.</p>
+
+<h2>History</h2>
+
+<p>In 2008, DC Robotics began when some parents donated $500 to start a robotics program at DC.  With startup capital, physics teacher Jim Crane took on the challenge of starting a robotics program in the DC High School.  After doing some research, Crane discussed the matter with some of his more prominent physics students to hear what they thought of launching, and participating in, a robotics program.  In the remainder of the 2008-2009 school year, those students tinkered with robot parts, seeing what they could do, aiming to build a flamethrower.</p>
+
+<div class="rightBox" style="float:right;">
+	<img src="_resources/2010team.jpg" alt="The 2009-2010 Robotics Club" style="width:300px;" />
+	<p class="caption"><b>The 2009-2010 Robotics Team</b> at the first tournament DC ever competed in. <i class="photoCredit">Photo: Jim Crane</i></p>
+
+</div>
+
+<p>The 2009-2010 school year saw the objective become what most would consider more typical as the program evolved into DC Knights team 1267 in the VEX Robotics Competition league.  With a shift in membership, efforts intensified in the spring, building toward DC's first tournament, to take place in March of 2010.  After a long night finishing the robot, team 1267 won the Driver Skills challenge, which qualified them for the World Championship in April.  This surprise victory raised the question as to whether or not the team would be able to go.  Eventually, everything was arranged and the team went.  Performance on the world stage was less than spectacular, but it showed that the DC Robotics program, still in pilot state, could excel in a global arena.</p>
+
+<p>Looking to expand in the 2010-2011 school year, Program Director Jim Crane opened the program to anyone interested in joining.  The result, a group of 26 students, broke into four separate High School teams.  By the end of the first semester in December, those teams had already piled up nine trophies and qualified three of the four teams.  This school year was also the christening year of J-Term, a two week period in January in which students can particiapate in an internship or courses in less-traditional subjects.  The DC Robotics staff, now including Chemistry &amp; Biology Teacher, Laura Tyler, designed J-Term courses to teach the basics to new-comers and let experienced students work on their competition robots.  Later that month, DC Robotics launched the middle school program.</p>

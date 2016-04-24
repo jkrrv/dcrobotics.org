@@ -1,0 +1,105 @@
+<!--<object data="_resources/openingSlides/index.php" type="text/html" standby="DC Robotics" border=0 style="overflow:hidden; width:980px; height:220px; background:#ded; border:1px; margin:-10px -10px 10px -10px;" class="dontPrint"></object>-->
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+var slideHeight=200;
+var slideStepTime=30; //26
+var slideChangeIncrement=5; //5
+var slideChangeRate=40; //40
+var slideChangePoint=21;
+var slideAnchorChangePercentage=75;
+var slidesThroughBlack=true;
+if (navigator.appName=="Microsoft Internet Explorer") {
+	slidesThroughBlack=false;
+}
+<?php $slidesRelUrl="/_resources/openingSlides/"; ?>
+var slidesRelUrl="<?php echo $slidesRelUrl; ?>";
+
+var slideContent = <?php 
+	echo "[";
+	$row = 1;
+	if (($handle = fopen("http://dcrobotics.org/_resources/openingSlides/slidesIndex.csv", "r")) !== false) {
+		while (($data = fgetcsv($handle, 1000, "|")) !== false) {
+			if ($row<>1) {
+				echo ",";
+			}
+			echo "[\"";
+			$num = count($data);
+			for ($c=0; $c < $num; $c++) {
+				if ($c<>0) {
+					echo "\",\"";
+				}
+				echo $data[$c];
+			}
+			if ($row==1) {
+				$slideInitial=$data[1];
+			}
+			$row++;
+			echo "\"]";
+		}
+		fclose($handle);
+	}
+	echo "]";
+
+?>;
+
+//]]>
+</script>
+
+<script type="text/javascript" src="http://dcrobotics.org/_resources/openingSlides/slideshow.js"></script>
+
+<img src="<?php echo $slidesRelUrl; echo $slideInitial; ?>" alt="" style="display:none;" id="slidesInitialImg" /> <!--forces onload (which starts slides moving) to wait until first image loads-->
+
+<div id="slides" style="overflow:hidden; width:960px; height:200px; background:#000; border:0; position:relative; margin:-10px -10px 10px -10px; display:none;" class="dontPrint" onmouseover="document.getElementById('slidesControl').style.display='block'; document.getElementById('slidesNavigator').style.display='block';" onmouseout="slidesMouseOut();">
+	<div title="" id="slidesA" style="position:absolute; height:200px; width:100%; opacity:1; filter:alpha(opacity=100); margin:0 auto; border:0; background:url('<?php echo $slidesRelUrl; echo $slideInitial; ?>');"></div>
+	<div title="" id="slidesB" style="position:absolute; height:200px; width:100%; opacity:0; filter:alpha(opacity=0);   margin:0 auto; border:0;"></div>
+	<img src="<?php echo $slidesRelUrl; ?>clear.gif" alt="" id="slidesCountdown" height="250" style="width:20px; background-color:#999; position:absolute; bottom:0px; top:auto; right:0px; overflow:hidden; opacity:.6; filter:alpha(opacity=60); border:0px;" />
+	<img src="<?php echo $slidesRelUrl; ?>clear.gif" alt="" style="width:100%; height:100%; Position:absolute; margin:0; overflow:hidden; border:0;" usemap="#slidesImageMap" />
+	<div id="slidesNavigator" style="height:16px; display:none; position:absolute; bottom:0px; right:84px; top:auto; overflow:hidden; padding:2px; background-image:url('<?php echo $slidesRelUrl; ?>gry.png'); "></div>
+	<div id="slidesControl" style="height:16px; display:none; position:absolute; bottom:0px; right:21px; top:auto; overflow:hidden; padding:2px; background-image:url('<?php echo $slidesRelUrl; ?>gry.png'); ">
+		<a href="javascript:;" onclick="slideCommand('-');">	<img src="<?php echo $slidesRelUrl; ?>clear.gif" id="slidesBtnPrev" title="Previous" alt="|&lt;" 	onmouseover="changeOpacity(this,1);" onmouseout="changeOpacity(this,.6);" style="width:16px; height:16px; background:url(<?php echo $slidesRelUrl; ?>slideControlButtons.png) -34px 0; opacity:.6; filter:alpha(opacity=60); " /></a>
+		<a href="javascript:;" onclick="slides();">		<img src="<?php echo $slidesRelUrl; ?>clear.gif" id="slidesBtnPlay" title="Pause" alt="||"		onmouseover="changeOpacity(this,1);" onmouseout="changeOpacity(this,.6);" style="width:16px; height:16px; background:url(<?php echo $slidesRelUrl; ?>slideControlButtons.png) -17px 0; opacity:.6; filter:alpha(opacity=60); " /></a>
+		<a href="javascript:;" onclick="slideCommand('+');">	<img src="<?php echo $slidesRelUrl; ?>clear.gif" id="slidesBtnNext" title="Next" alt=">|" 		onmouseover="changeOpacity(this,1);" onmouseout="changeOpacity(this,.6);" style="width:16px; height:16px; background:url(<?php echo $slidesRelUrl; ?>slideControlButtons.png) -51px 0; opacity:.6; filter:alpha(opacity=60); " /></a>
+	</div>
+<map name="slidesImageMap" id="slidesImageMap">
+<area alt="" />
+</map>
+
+
+</div>
+<script type="text/javascript">document.getElementById('top').style.display="none"; document.getElementById('slides').style.display="block"; //hide top thingy and replace with slide thingy</script>
+<script type="text/javascript">document.onLoad=slidesOnLoad();</script>
+
+
+<div style="float:right;">
+
+<div style="overflow:hidden; width:298px; padding:0; text-align:left; font-size:12px; line-height:16px; float:none; border:1px solid #aaa; margin-bottom: 10px;" class="rightBox">
+<div style="width:100%; text-align:center; background-color:#EDEFF4; color:#111; font-size:20px; padding:5px 0;">Upcoming Competitions:</div><ul>
+<li><b>Philadelphia Region Pre-Worlds Scrimmage</b><br />
+Apr 2 - Home - DC Upper Campus<br />Newtown Square, PA - 
+<a href="http://maps.google.com/maps?f=d&source=s_d&saddr=&daddr=462+malin+rd,+newtown+square,+pa&hl=en&geocode=FfRYYgIdB8KB-ykRzjt84-rGiTFACEs9Tx9rrg&mra=ls&sll=39.999732,-75.382265&sspn=0.007068,0.016512&ie=UTF8&t=h&z=17" class="_blank" title="Directions">Directions</a></li>
+<li><b>2011 VEX Robotics World Championship</b><br />
+Apr 14-16 - ESPN Wide World of Sports<br />Kissimmee, FL - 
+<a href="http://robotevents.com/2011-vex-robotics-world-championship.html" class="_blank" title="Info page on RobotEvents.com">Event Info</a></li>
+</ul>
+</div>
+
+<object type="text/html" data="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fdcrobotics&amp;width=300&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=true&amp;height=285" standby="Facebook Feed" style="overflow:hidden; width:300px; height:285px; padding:0; float:none;" class="dontPrint rightBox" id="facebookBox"></object>
+</div>
+
+<h1>Hello world.</h1>
+
+<p>Now in a second year, DC Robotics seeks to engage and educate students in Science, Technology, Engineering, and Math (STEM) by challenging them to build a winning robot for the <a href="http://www.vexrobotics.com/competition/vex-robotics-competition" class="_confirm _blank">VEX Robotics Competition</a>.  Composed entirely of students from <a href="http://dccs.org" class="_blank">Delaware County Christian School</a>, teams learn in a manner tremendously different from other robotics programs: rather than steering students along a particular path, teachers provide the tools for students to try and fail and learn from their own mistakes.  This method has been questioned by teachers and mentors from other schools, but the results speak for themselves.  So far this season, the four high school teams have amassed ten trophies, six of which meet the qualification requirements for the World Championship in Orlando.</p>
+
+
+<p>In October 2010, DC hosted a robotics tournament for the first time.  As nearby schools had barely started their year, the event proved to be a small one, but it showed the region that DC could easily host a much larger championship.  On February 26th, some of that potential was realized with a multi-tournament event, which has shaped into one of the best events of the year.  Now, event planning staff is looking forward to hosting a scrimmage on April 2 to prepare world-championship-bound teams for the world stage.  For more on DC Robotics events, see the <a href="events">events page</a>, or if you would be interested in being one of the volunteers who hold our events together, <a href="mailto:jcrane@dccs.org">contact Program Director Jim Crane</a>.</p>
+
+<script type="text/javascript">
+//<![CDATA[
+if (navigator.appName=="Microsoft Internet Explorer") {
+	document.getElementById('facebookBox').outerHTML="<iframe src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fdcrobotics&amp;width=300&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=true&amp;height=285' style='overflow:hidden; width:300px; height:285px; padding:0; border:0;' class='dontPrint rightBox'></iframe>";
+}
+//]]>
+</script>

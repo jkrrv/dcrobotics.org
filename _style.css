@@ -1,0 +1,239 @@
+@media print {
+ .dontPrint {
+  display:none;
+ }
+}
+
+@media screen {
+ .onlyPrint {
+  display:none;
+ }
+}
+
+img {
+  border:0;
+}
+td {
+  vertical-align:top;
+}
+body {
+  line-height:24px;
+  margin:0px; 
+  background: #000 url('/_formatting/bg.png') no-repeat fixed 95% 90%;
+  color:#111;
+  font-family: Trebuchet MS, Verdana, Arial, Saab;
+  font-size: 16px; 
+}
+.rightBox {
+  float:right;
+  padding:2px 2px 4px 2px;
+  margin:0 0 0 12px;
+  background:#ded;
+  text-align:center;
+}
+.leftBox {
+  float:left;
+  padding:2px 2px 4px 2px;
+  margin:0 12px 0 0;
+  background:#ded;
+  text-align:center;
+}
+td.box {
+  float:left;
+  padding:4px 4px 0 4px;
+  margin:4px 12px;
+  background:#ded;
+}
+p.caption {
+  text-align:left;
+  display:block;
+  max-width:288px;
+  padding:0 4px; 
+  margin:0;
+  line-height:12px;
+  font-size:10px;
+  text-indent:0;
+}
+i.photoCredit {
+  color:#aba;
+}
+
+h1 {
+  font-family:monospace;
+  font-variant: small-caps;
+  width:100%;
+  font-size:36px;
+  min-height:29px;
+  margin:5px 0 0 0;
+  color:#484;
+}
+h2 {
+  font-family:monospace;
+  font-variant: small-caps;
+  width:100%;
+  font-size:28px;
+  min-height:17px;
+  margin:10px 0 0 0;
+  color:#363;
+}
+h7 {
+  font-family:monospace;
+  width:100%;
+  font-size:12px;
+  margin:-10px 0;
+  color:#aba;
+  line-height:6px;
+}
+
+p {
+  margin:0 0 12px 0;
+  text-align:justify;
+  text-indent:20px;
+}
+
+a:link {
+  text-decoration:underline;
+  color:#111;
+}
+a:visited {
+  text-decoration:underline;
+  color:#222;
+}
+a:hover {
+  text-decoration:none;
+  color:#393;
+}
+a:active {
+  text-decoration:none;
+  color:#0f0;
+}
+div#greenThing {
+  width:968px;
+  margin:0 auto;
+  background:#121;
+}
+div#corset {
+  width:940px;
+  background:#cdc url('_formatting/corset-bg.png') no-repeat 30px bottom;
+  margin: 0px auto 0 auto;
+  height:100%;
+  padding:10px;
+}
+span#lastModified {
+  font-size:10px;
+  text-align:right;
+  display:block;
+  margin: 10px -6px -10px 10px;
+  color:#9a9;
+}
+
+/* nav stuff */
+
+span.navP {
+  text-decoration:none;
+  text-align:center;
+  display:inline-block;
+  height:25px;
+  width:100%;
+  background: transparent url('_formatting/navDivid.png') no-repeat right top;
+}
+span.navP:hover {
+  text-decoration:none;
+  color:#cf6;
+}
+
+div.navCol {
+  text-decoration:none;
+  float:left;
+  height:25px;
+  overflow:hidden;
+  text-align:center;
+  position:relative;
+  background: transparent url('_formatting/navHov.png') no-repeat center 40px;
+  width:120px;     		/* nav width */
+}
+div.navCol:hover {
+  text-decoration:none;
+  color:#cf6;
+  overflow:visible;
+  background: transparent url('_formatting/navHov.png') no-repeat center 20px;
+  position:relative;
+  z-index:1;
+}
+
+span.nav2 {
+  text-decoration:none;
+  background-color: #333;
+  text-align:center;
+  display:inline-block;
+  width:100%;
+}
+span.nav2:hover {
+  text-decoration:none;
+  color:#cf6;
+  background-color: #666;
+}
+
+div.navColR {
+  text-decoration:none;
+  float:right;
+  height:25px;
+  overflow:hidden;
+  text-align:center;
+  position:relative;
+  width:120px;     /* nav width */
+}
+div.navColR:hover {
+  text-decoration:none;
+  color:#cf6;
+  overflow:visible;
+  background: transparent url('_formatting/navHov.png') no-repeat center 20px;
+}
+
+a.nav:link, a.nav:visited {
+  text-decoration:none;
+  color:#efd;
+}
+
+
+
+/* footer stuff */
+#footer, .footer:link, .footer:visited {
+  color:#202020;
+  font-size:8px;
+  line-height:105%;
+}
+.footer:hover {
+  color:#0a0;
+}
+
+
+
+/* error stuff */
+div.yellowError {
+  background-image:url('_formatting/error-yellow.png');
+  border:5px solid #ff0;
+  padding:5px;
+  background-color:#aaa;
+  min-height:84px;
+}
+div.redError {
+  background-image:url('_formatting/error-red.png');
+  border:5px solid #f00;
+  padding:5px;
+  background-color:#aaa;
+  min-height:84px;
+}
+div.greenError {
+  background-image:url('_formatting/error-green.png');
+  border:5px solid #0c0;
+  padding:5px;
+  background-color:#aaa;
+  min-height:84px;
+}
+h2.error, p.error, span.error {
+  margin:5px;
+  line-height:16px;
+  /* text-shadow: #000 1px 1px 1px; */
+  color:#fff;
+}
